@@ -1,14 +1,20 @@
 ---
-import ConnectWallet from "../components/ConnectWallet.jsx";
+import Layout from '../layouts/Layout.astro';
+import ConnectWallet from '../components/ConnectWallet.jsx';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro + Web3 Wallet Demo</title>
-  </head>
-  <body class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-200">
-    <ConnectWallet client:load />
-  </body>
-</html>
+<Layout title="Astro Web3">
+  <main class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <div class="max-w-3xl">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">
+        Welcome to the 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Future of the Web</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-8">
+        Connect your wallet to get started with our decentralized application. 
+        Experience the power of Web3 with Astro.
+      </p>
+      <ConnectWallet client:load />
+    </div>
+  </main>
+</Layout>
